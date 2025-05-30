@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 19</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+    <style>
+        body {
+            font-family: 'Montserrat';
+        }
+         table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 20px 0;
+        }
+        caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px 12px;
+            text-align: center;
+        }
+        thead {
+            background-color: #f0f0f0;
+        }
+        tfoot {
+            background-color: #dcdcdc;
+            font-weight: bold;
+        }
+        col.nome {
+            background-color: #e0f7fa;
+        }
+        col.email {
+            background-color: #fce4ec;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h1>Tabela com colgroup, col, thead, tbody e tfoot</h1>
+    
+    <table>
+        <caption>Cadastro de Funcionários</caption>
+    
+        <colgroup>
+            <col class="nome">
+            <col class="email">
+            <col style="background-color: #f3e5f5;">
+        </colgroup>
+    
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Cargo</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr>
+                <td>Ana Silva</td>
+                <td>anaifc.edu.br</td>
+                <td>Diretora</td>
+            </tr>
+            <tr>
+                <td>João Souza</td>
+                <td>joaoifc.edu.br</td>
+                <td>Técnico</td>
+            </tr>
+            <tr>
+                <td>Paula Costa</td>
+                <td>paulaifc.edu.br</td>
+                <td>Secretária</td>
+            </tr>
+        </tbody>
+    
+        <tfoot>
+            <tr>
+                <td colspan="3">Total de Funcionários: 3</td>
+            </tr>
+        </tfoot>
+    
+    </table>
+</body>
+
+</html>
