@@ -12,3 +12,7 @@ para Internet, do Instituto Federal Catarinense, como requisito parcial para a a
 HTML 4.01 - Lista de Exercícios [aqui](/Unidade%204/HTML%204.01)
 
 HTML 5 - Lista de Exercícios [aqui](/Unidade%204/HTML%205)
+
+## Unidade 5
+
+AD3 - Atividade de Aprendizagem 3 [aqui](Unidade%205/AD3)
