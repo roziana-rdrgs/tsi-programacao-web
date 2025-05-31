@@ -1,0 +1,158 @@
+body {
+    font-family: 'Montserrat';
+    padding: 0;
+    margin: 0;
+}
+
+.menu-superior {
+    height: 50px;
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    background-color: rgb(46, 43, 43);
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        li {
+            margin-right: 25px;
+            cursor: pointer;
+            &.selecionado {
+                    font-weight: 900;
+                    cursor: default;
+                }
+            a, a:visited {
+                text-decoration: none;
+                color: whitesmoke;
+            }
+
+        }
+        li:hover {
+           font-weight: 900;
+        }
+    }
+}
+
+.header {
+    height: 200px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background: url("./resources/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(2px);
+}
+
+.grid-conteudo {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.principal {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    gap: 10px;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    border: solid 2px black;
+    box-sizing: border-box;
+    padding: 20px;
+    cursor: pointer;
+    height: auto;
+
+    &:hover {
+        border: solid 3px black;
+    }
+
+    h1 &:hover {
+        font-weight: 900;
+    }
+    .corpo{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    
+
+        img {
+            height: 200px;
+            max-width: 200px;
+        }
+    }
+
+
+}
+
+.menu {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 8px;
+
+    button {
+        font-family: 'Montserrat';
+        height: 50px;
+        width: 200px;
+        cursor: pointer;
+        background-color: transparent;
+
+        &:hover{
+            font-weight: 900;
+            border: solid 3px black;
+        }
+    }
+}
+
+#icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background:
+            url("./resources/user.png") center/cover no-repeat,
+            whitesmoke;
+    border: 10px solid whitesmoke;
+    box-sizing: border-box;
+    position: absolute;
+    right: 25px;
+    top: 60px;
+    animation: mymove 5s infinite;
+    -moz-animation: mymove 5s infinite;
+    -webkit-animation: mymove 5s infinite;
+    cursor: pointer;
+    
+        
+}
+
+@keyframes mymove {
+50% {
+        box-shadow: 0px 120px 0px rgba(0, 0, 0, 0);;
+        background-position: 0 120px;
+    }
+}
+
+@-moz-keyframes mymove{
+50% {
+        box-shadow: 0px 120px 0px rgba(0, 0, 0, 0);;
+        background-position: 0 120px;
+    }
+}
+
+@-webkit-keyframes mymove{
+50% {
+        box-shadow: 0px 120px 0px rgba(0, 0, 0, 0);
+        background-position: 0 120px;
+    }
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TSI - Técnologo em Sistemas para Internet </title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="calendario-style.css" />
+</head>
+
+<body>
+    <div class="menu-superior">
+        <ul>
+            <li><a href="./index.html">página inicial</a></li>
+            <li class="selecionado">calendário</li>
+        </ul>
+    </div>
+    <div class="header"> </div>
+    <a href="https://www.camboriu.ifc.edu.br/" target="_blank">
+        <div id="icon"></div>
+    </a>
+
+
+    <div class="conteudo-pagina">
+        <div class="calendario">
+            <div id="mes">
+                <h2>Junho 2025</h2>
+            </div>
+        
+            <table align="center">
+                <thead>
+                    <tr>
+                        <th>Dom</th>
+                        <th>Seg</th>
+                        <th>Ter</th>
+                        <th>Qua</th>
+                        <th>Qui</th>
+                        <th>Sex</th>
+                        <th>Sab</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td class="prova">26</td>
+                        <td class="prova">27</td>
+                        <td class="prova">28</td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td>30</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+        
+                </tbody>
+            </table>
+        </div>
+
+        <div class="legenda">
+            <ul>
+                <li>26 - avaliações semestrais</li>
+                <li>27 - avaliações semestrais</li>
+                <li>28 - avaliações semestrais</li>
+            </ul>
+        </div>
+        
+        <div class="lista-tarefas">
+            <h3>Lista de tarefas</h3>
+            <input id="input-tarefa"/>
+            <button id="adicionar-tarefa">adicionar</button>
+
+            <div id="tarefas">
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+
+    const buttonAdicionarTarefa = document.getElementById("adicionar-tarefa");
+    const inputTarefa = document.getElementById("input-tarefa");
+    const areaTarefas = document.getElementById("tarefas");
+
+    buttonAdicionarTarefa.addEventListener("click", () => {
+        const tarefa = inputTarefa.value;
+            if (tarefa === "") return ;
+            
+
+        const divTarefa = document.createElement("div");
+        const novoCheckbox = document.createElement("input");
+        novoCheckbox.type = "checkbox";
+
+        const textoTarefa = document.createTextNode(tarefa);
+
+        divTarefa.appendChild(novoCheckbox);
+        divTarefa.appendChild(textoTarefa);
+
+        areaTarefas.appendChild(divTarefa);
+        inputTarefa.value = "";
+    });
+</script>
+
+</html>
