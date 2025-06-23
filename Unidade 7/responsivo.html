@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Teste de Responsividade com Imagens</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        function myFunction() {
+            var x = document.getElementById("myImg").currentSrc;
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Resoluções para manipulação
+    ==================================
+    320 × 100 px = 30.000 px
+    640 x 200 px = 128.000 px
+    800 x 250 px = 200.000 px
+    1.024 x 320 px = 327.680 px
+    1.280 x 400 px = 512.000 px
+    2.560 x 800 px = 2.048.000 px
+    11.462 x 3581 px = 41.045.422 px
+    ------------------------------------------- -->
+
+    1) Coisas a ter em mente, antes de começar a olhar para os diferentes exemplos, aqui estão algumas coisas a serem
+    lembradas: Caso de uso de direção de arte "ART". Ou seja, ao utilizar zoom+ apresenta limite <br>
+
+    <picture>
+        <source media="(min-width: 1024px)" srcset="opera-fullshot.jpg">
+        <img src="opera-closeup.jpg" alt="The Oslo Opera House">
+    </picture>
+    <p><br>
+
+        2) TIPO DE MIME <br>
+        <picture>
+            <source srcset="opera.webp" type="image/webp">
+            <img src="opera.jpg" alt="The Oslo Opera House">
+        </picture>
+    <p><br>
+
+        3) TIPO DE MIME E ART DIRECTION<br>
+        <picture>
+            <source media="(min-width: 1024px)" srcset="opera-fullshot.webp" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="opera-fullshot.jpg">
+            <source srcset="opera-closeup.webp" type="image/webp">
+            <img src="opera-closeup.jpg" alt="The Oslo Opera House">
+        </picture>
+    <p><br>
+
+        4) High-DPI <br>
+        <img src="opera-1x.jpg" alt="The Oslo Opera House" srcset="opera-2x.jpg 2x, opera-3x.jpg 3x">
+    <p><br>
+
+        5) High-DPI e art directin <br>
+        <picture>
+            <source media="(min-width: 1024px)"
+                srcset="opera-fullshot-1x.jpg 1x, opera-fullshot-2x.jpg 2x, opera-fullshot-3x.jpg 3x">
+            <img src="opera-closeup-1x.jpg" alt="The Oslo Opera House"
+                srcset="opera-closeup-2x.jpg 2x, opera-closeup-3x.jpg 3x">
+        </picture>
+    <p><br>
+
+        6) High-DPI e tipo de mime <br>
+        <picture>
+            <source srcset="opera-1x.webp 1x, opera-2x.webp 2x, opera-3x.webp 3x" type="image/webp">
+            <img src="opera-1x.jpg" alt="The Oslo Opera House" srcset="opera-2x.jpg 2x, opera-3x.jpg 3x">
+        </picture>
+    <p><br>
+
+        7) High-DPI, tipo de mime e art direction <br>
+        <picture>
+            <source media="(min-width: 1024px)"
+                srcset="opera-fullshot-1x.webp 1x, opera-fullshot-2x.webp 2x, opera-fullshot-3x.webp 3x"
+                type="image/webp">
+            <source media="(min-width: 1024px)"
+                srcset="opera-fullshot-1x.jpg 1x, opera-fullshot-2x.jpg 2x, opera-fullshot-3x.jpg 3x">
+            <source srcset="opera-closeup-1x.webp 1x, opera-closeup-2x.webp 2x, opera-closeup-3x.webp 3x"
+                type="image/webp">
+            <img src="opera-closeup-1x.jpg" alt="The Oslo Opera House"
+                srcset="opera-closeup-2x.jpg 2x, opera-closeup-3x.jpg 3x">
+        </picture>
+    <p><br>
+
+        8) sizes <br>
+        <img src="opera-fallback.jpg" alt="The Oslo Opera House" sizes="(min-width: 640px) 60vw, 100vw"
+            srcset="opera-200.jpg 200w, opera-400.jpg 400w, opera-800.jpg 800w, opera-1200.jpg 1200w">
+    <p><br>
+
+    <h3>Uma demonstração de como acessar um elemento IMG</h3>
+   
+    <img id="myImg" src="opera-1x.jpg" srcset="opera-2x.jpg 2x, opera-3x.jpg 3x" alt="The Pulpit Rock" width="304"
+        height="228">
+    <p>Clique no botão para obter o URL da imagem</p>
+    <button onclick="myFunction()">Tente</button>
+    <p id="demo"></p>
+</body>
+
+</html>
