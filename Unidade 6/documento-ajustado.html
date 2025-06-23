@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Exercicio JavaScript - TSI25 / 2025 </title>
+        <script type="text/javascript">
+            function subtracao() {
+                valor2 = parseFloat(document.getElementById("valor2").value);
+                valor1 = parseFloat(document.getElementById("valor1").value)
+                resultadoSubtracao = valor1 - valor2;
+                
+                if (!valor1 || !valor2) {
+                    alert('Valores Invalidos, insira novamente.');
+                    return;
+                }
+                if (resultadoSubtracao == 0) {
+                    alert('A subtração de ' + valor1 + ' - ' + valor2 + ' foi: 0');
+                } else {
+                    if (valor1 > valor2) {
+                        alert('A subtração de ' + valor1 + ' - ' + valor2 + ' foi: ' + resultadoSubtracao + '. O primeiro valor é maior que o segundo.');
+                    } else {
+                        alert('A subtração de ' + valor1 + ' - ' + valor2 + ' foi: ' + resultadoSubtracao + '. O primeiro valor é menor que o segundo.');
+                    }
+                    
+                }
+            }
+            function divisao() {
+                valor2 = parseFloat(document.getElementById("valor2").value);
+                valor1 = parseFloat(document.getElementById("valor1").value);
+
+                if (!valor1 || !valor2) {
+                    alert('Valores Invalidos, insira novamente.');
+                    return;
+                }
+                if (valor2 == 0) {
+                    alert('Divisão por zero não é permitida.');
+                    return;
+                }
+                resultadoDivisao = valor1 / valor2;
+                alert(resultadoDivisao);
+               
+            } 
+            function multiplicacao() {
+                valor2 = parseFloat(document.getElementById("valor2").value);
+                valor1 = parseFloat(document.getElementById("valor1").value);
+                resultadoMultiplicaocao = valor1 * valor2;
+                if(!valor1 || !valor2) {
+                    alert('Valores Invalidos, insira novamente.');
+                    return;
+                }
+                alert(resultadoMultiplicaocao);
+               
+            }
+            function adicao() {
+                valor2 = parseFloat(document.getElementById("valor2").value);
+                valor1 = parseFloat(document.getElementById("valor1").value);
+                soma = valor1 + valor2;
+                if (!valor1 || !valor2) {
+                    alert('Valores Invalidos, insira novamente.');
+                    return;
+                }
+              
+                alert('A soma de ' + valor1 + ' + ' + valor2 + ' foi: ' + soma);
+                
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class='well' style='text-align:center;margin-left:auto; margin-right:auto; width:200px; margin-top:30px'>
+            <h5>Calcular Valores</h5>
+            <input class="input-small" type="number" id="valor1" placeholder='Primeiro'>
+            <br>
+            <input class="input-small" type="number" id="valor2" placeholder='Segundo'>
+            <br>
+            <input type="button" value="-" class='btn btn-info' onclick="subtracao()">
+            <input type="button" value="/" class='btn btn-info' onclick="divisao()">
+            <input type="button" value="*" class='btn btn-info' onclick="multiplicacao()">
+            <input type="button" value="+" class='btn btn-info' onclick="adicao()">
+        </div>
+    </body> 
+ </html>
